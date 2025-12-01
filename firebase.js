@@ -6,11 +6,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth
 const firebaseConfig = {
   apiKey: "AIzaSyAIgbQy8ggZr6thFmBCiv3UviZ2XHQzyuQ",
   authDomain: "rentak-dd050.firebaseapp.com",
+  databaseURL: "https://rentak-dd050-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "rentak-dd050",
   storageBucket: "rentak-dd050.firebasestorage.app",
   messagingSenderId: "43640732554",
   appId: "1:43640732554:web:a03249bad528e1e6b62673",
-  measurementId: "G-M63ED3KCYR",
+  measurementId: "G-M63ED3KCYR"
 };
 
 export const app = initializeApp(firebaseConfig);
