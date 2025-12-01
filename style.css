@@ -1,6 +1,0 @@
-body { font-family: system-ui, sans-serif; }
-.card.available { border-left: 6px solid #198754; }
-.card.rented { border-left: 6px solid #dc3545; opacity: 0.9; }
-.motor-img { height:120px; object-fit:cover; }
-.small { font-size:0.9rem; }
-.container { max-width:1100px; }
