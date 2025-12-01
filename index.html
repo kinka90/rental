@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sewa Motor - Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sewa Motor</a>
+    <div>
+      <a class="btn btn-outline-light btn-sm" href="admin.html">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <h3 class="mb-3">Daftar Motor</h3>
+  <div id="motorList" class="row g-3"></div>
+</div>
+
+<!-- Modal: Form Sewa -->
+<div class="modal fade" id="rentModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="rentForm" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Form Penyewaan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="motorId">
+        <div class="mb-2">
+          <label class="form-label">Nama Penyewa</label>
+          <input type="text" id="renterName" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Kontak/HP</label>
+          <input type="tel" id="renterPhone" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Mulai Sewa</label>
+          <input type="datetime-local" id="startAt" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Akhir Sewa</label>
+          <input type="datetime-local" id="endAt" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Harga per Jam (Rp)</label>
+          <input type="number" id="pricePerHour" class="form-control" value="5000" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Estimasi Harga (Rp)</label>
+          <input type="text" id="estPrice" class="form-control" readonly>
+        </div>
+        <div class="form-text">Notifikasi WhatsApp akan dibuka setelah konfirmasi untuk mengirim rincian ke penyewa.</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Batal</button>
+        <button class="btn btn-primary" type="submit">Konfirmasi & Sewa</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
